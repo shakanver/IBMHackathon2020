@@ -2,7 +2,7 @@
 import { Appliance } from "/Appliance.js";
 import {Energy} from "/EnergyClass.js";
 import {User} from "/UserClass.js";
-import {}
+import {data} from "/data.js";
 
 //Add a new user profile to the database
 export default function registerUser(name, email, password) {

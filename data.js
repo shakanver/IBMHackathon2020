@@ -2,7 +2,7 @@
 //and appliances created in simple lists
 //For the future, we plan to use secure database systems such as MongoDB
 
-data = [{
+export default data = [{
     "users": [],
     "numUsers": 0,
     "passwords": [],
