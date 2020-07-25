@@ -1,5 +1,4 @@
-
-class Energy {
+export default class Energy {
     constructor(daily_goal, weekly_goal, daily_used, weekly_used) {
         this.daily_goal = daily_goal;
         this.weekly_goal = weekly_goal;

@@ -1,5 +1,5 @@
 
-class User {
+export default class User {
     //user inputs name, email and password during registration 
     constructor(name, email,password, appliances, energy) {
         this.name = name;
