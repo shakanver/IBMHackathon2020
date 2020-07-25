@@ -12,8 +12,11 @@ app.use(express.json()); //this enables the application to use json
 //register user
 app.post('/register', (req, res) => {
     //take in relevent details from http request
-
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password; 
     //create a user object
+    
     //push object to database
     //redirect user to login page
 });
