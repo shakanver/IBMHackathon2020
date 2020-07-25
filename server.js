@@ -24,7 +24,7 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     //get username and password
     //authenticate user
-    //return token
+    //return login status
 });
 
 app.post('/logout', (req, res) => {
