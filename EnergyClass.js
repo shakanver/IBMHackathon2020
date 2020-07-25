@@ -1,4 +1,4 @@
-//energy class that stores the energy data for each user
+
 class Energy {
     constructor(daily_goal, weekly_goal, daily_used, weekly_used) {
         this.daily_goal = daily_goal;
