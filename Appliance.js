@@ -5,3 +5,4 @@ class Appliance {
         this.daily_consumed = daily_consumed;
     }
 }
+
