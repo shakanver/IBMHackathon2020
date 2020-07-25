@@ -4,6 +4,7 @@
 
 export default data = [{
     "users": [],
+    "loggedInUsers": [],
     "numUsers": 0,
     "passwords": [],
     "emails": [],
