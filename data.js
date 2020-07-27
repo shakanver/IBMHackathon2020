@@ -2,15 +2,18 @@
 //and appliances created in simple lists
 //For the future, we plan to use secure database systems such as MongoDB
 
-export default data = [{
-    "users": [],
-    "loggedInUsers": [],
-    "numUsers": 0,
-    "passwords": [],
-    "emails": [],
-    },
-    {
-     "appliances": [],
-     "numAppliances": 0,
-    }
-];
+module.exports = 
+    { 
+        data: [{
+        "users": [],
+        "loggedInUsers": [],
+        "numUsers": 0,
+        "passwords": [],
+        "emails": [],
+        },
+        {
+        "appliances": [],
+        "numAppliances": 0,
+        }
+        ]
+    };
