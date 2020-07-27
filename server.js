@@ -2,6 +2,7 @@
 import { Appliance } from "/Appliance.js";
 import {Energy} from "/EnergyClass.js";
 import {User} from "/UserClass.js";
+import {registerUser} from "/AuthenticationFunctions.js";
 require('dotenv').config();
 const express = require('express'); //import the express library
 const app = express() //express is a class so we need to create an object for it
@@ -16,9 +17,10 @@ app.post('/register', (req, res) => {
     const email = req.body.email;
     const password = req.body.password; 
     //create a user object
-    
     //push object to database
+    const user = registerUser(name, email, password);
     //redirect user to login page
+    res.json({name: user.name, email: user.email});
 });
 
 app.post('/login', (req, res) => {
