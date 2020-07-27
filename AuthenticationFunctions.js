@@ -6,9 +6,10 @@ import {data} from "/data.js";
 
 //Add a new user profile to the database
 export default function registerUser(name, email, password) {
-    const energy = new Energy(0,0,0,0);
-    const user = new User(name, email, password, [], energy);
-    data[0].users.push(user);
+    const energy = new Energy(0,0,0,0);//create energy object 
+    const user = new User(name, email, password, [], energy); //create user object
+    //push new user data to database
+    data[0].users.push(user); 
     data[0].passwords.push(password);
     data[0].emails.push(email);
     return user;
