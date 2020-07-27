@@ -1,9 +1,9 @@
 //Back end server for the Euphaura app
-import { Appliance } from "/Appliance.js";
-import {Energy} from "/EnergyClass.js";
-import {User} from "/UserClass.js";
-import {registerUser} from "/AuthenticationFunctions.js";
 require('dotenv').config();
+const appliance = require("./Appliance.js");
+const user = require("./UserClass.js");
+const energy = require("./EnergyClass.js");
+const auth = require("./AuthenticationFunctions.js");
 const express = require('express'); //import the express library
 const app = express() //express is a class so we need to create an object for it
 const jwt = require('jsonwebtoken');//import jwt class for our token authentication system
@@ -18,7 +18,7 @@ app.post('/register', (req, res) => {
     const password = req.body.password; 
     //create a user object
     //push object to database
-    const user = registerUser(name, email, password);
+    const user = auth.registerUser(name, email, password);
     //redirect user to login page
     res.json({name: user.name, email: user.email});
 });

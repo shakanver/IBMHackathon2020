@@ -1,4 +1,4 @@
-export default class Appliance {
+module.exports = class Appliance {
     constructor(name, power_rating, daily_consumed) {
         this.name = name;
         this.power_rating = power_rating;
