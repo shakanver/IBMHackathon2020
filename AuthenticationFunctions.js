@@ -1,14 +1,12 @@
 //functions used in the authentication process
-import { Appliance } from "/Appliance.js";
-import {Energy} from "/EnergyClass.js";
-import {User} from "/UserClass.js";
-import {data} from "/data.js";
+const appliance = require("./Appliance.js");
+const user = require("./UserClass.js");
+const energy = require("./EnergyClass.js");
 
-//Add a new user profile to the database
 module.exports = {
     registerUser: function(name, email, password) {
-        const energy = new Energy(0,0,0,0);//create energy object 
-        const user = new User(name, email, password, [], energy); //create user object
+        const energy = new energy(0,0,0,0);//create energy object 
+        const user = new user(name, email, password, [], energy); //create user object
         //push new user data to database
         data[0].users.push(user); 
         data[0].passwords.push(password);
