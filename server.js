@@ -26,8 +26,12 @@ app.post('/register', (req, res) => {
 
 app.post('/login', (req, res) => {
     //get username and password
+    const email = req.body.email;
+    const password = req.body.password;
     //authenticate user
+    const status = auth.loginUser(email, password);
     //return login status
+    res.json({status: status});
 });
 
 app.post('/logout', (req, res) => {

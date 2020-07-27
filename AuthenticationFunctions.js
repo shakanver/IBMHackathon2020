@@ -16,7 +16,7 @@ module.exports = {
     },
 
     loginUser: function(email, password) {
-        const status = "";
+        var status = "";
         for(i = 0, len = data[0].users.length; i < len; i++) {
             let user = data[0].users[i];
             if (user.email == email && user.password == password) {

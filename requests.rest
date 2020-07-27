@@ -6,3 +6,13 @@ Content-Type: application/json
     "email": "shakeelanver26@gmail.com",
     "password": "1234"
 }
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "shakeelanver26@gmail.com",
+    "password": "1234"
+}
