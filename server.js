@@ -19,13 +19,13 @@ app.post('/register', (req, res) => {
     const password = req.body.password; 
     //create a user object
     //push object to database
-    const user = auth.registerUser(name, email, password);
     //console.log(user);
     //redirect user to login page
-    if (user == null){
+    if (auth.userExists(name, email, password)){
         res.json({message: "user already exists"});
     }else{
-        res.json({name: user.name, email: user.email});
+        const user = auth.registerUser(name, email, password);
+        res.json({user: user});
     }
 });
 
