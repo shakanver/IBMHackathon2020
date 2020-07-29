@@ -19,7 +19,6 @@ app.post('/register', (req, res) => {
     const password = req.body.password; 
     //create a user object
     //push object to database
-    //console.log(user);
     //redirect user to login page
     if (auth.userExists(name, email, password)){
         res.json({message: "user already exists"});
