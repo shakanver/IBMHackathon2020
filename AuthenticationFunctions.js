@@ -4,10 +4,28 @@ const User = require("./UserClass.js");
 const Energy = require("./EnergyClass.js");
 const {data} = require("./data.js")
 
+
+//checks if a user alredy exists, plan to modify it further so that 
+//the register function can specify if a certain password or usernam already exists
+function UserExists(user) {
+    for(i = 0, len = data[0].users.length; i < len; i++) {
+        let usr = data[0].users[i];
+        if (user === usr) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 module.exports = {
     registerUser: function(name, email, password) {
         const energy = new Energy(0,0,0,0);//create energy object 
         const user = new User(name, email, password, [], energy); //create user object
+        //check if that user already exists
+        if (UserExists(user)) {
+            return null;
+        }
         //push new user data to database
         data[0].users.push(user); 
         data[0].passwords.push(password);
