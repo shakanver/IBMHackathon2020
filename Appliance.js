@@ -1,3 +1,8 @@
+/*
+Appliance class to store information about each appliance object
+*/
+
+
 module.exports = class Appliance {
     constructor(name, power_rating, daily_consumed) {
         this.name = name;

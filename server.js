@@ -20,6 +20,7 @@ app.post('/register', (req, res) => {
     //create a user object
     //push object to database
     const user = auth.registerUser(name, email, password);
+    //console.log(user);
     //redirect user to login page
     if (user == null){
         res.json({message: "user already exists"});
@@ -39,9 +40,14 @@ app.post('/login', (req, res) => {
 });
 
 app.post('/logout', (req, res) => {
+    
+    const email = req.body.email;
+    const password = req.body.password;
     //change a user's online status 
     //log them out of the system
+    auth.logoutUser(email, password);
     //redirect to login  page
+    res.json({message: "user logged out"})
 });
 
 app.listen(3000) //listen in for requests on port 3000
