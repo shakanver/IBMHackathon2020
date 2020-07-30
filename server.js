@@ -1,6 +1,6 @@
 //Back end server for the Euphaura app
 require('dotenv').config();
-const appliance = require("./Appliance.js");
+const appliance = require("./ApplianceClass.js");
 const user = require("./UserClass.js");
 const energy = require("./EnergyClass.js");
 const auth = require("./AuthenticationFunctions.js");

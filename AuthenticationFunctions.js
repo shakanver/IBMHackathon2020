@@ -1,5 +1,5 @@
 //functions used in the authentication process
-const Appliance = require("./Appliance.js");
+const Appliance = require("./ApplianceClass.js");
 const User = require("./UserClass.js");
 const Energy = require("./EnergyClass.js");
 const {data} = require("./data.js")
