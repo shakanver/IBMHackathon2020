@@ -38,7 +38,7 @@ app.post('/login', (req, res) => {
     res.json({status: status});
 });
 
-app.post('/logout', (req, res) => {
+app.delete('/logout', (req, res) => {
     
     const email = req.body.email;
     const password = req.body.password;
