@@ -44,9 +44,14 @@ app.delete('/logout', (req, res) => {
     const password = req.body.password;
     //change a user's online status 
     //log them out of the system
-    auth.logoutUser(email, password);
+    const stat = auth.logoutUser(email, password);
     //redirect to login  page
-    res.json({message: "user logged out"})
+    if (stat) {
+        res.json({message: "user logged out"});
+    } else {
+        res.json({message: "user not found"});
+    }
+    
 });
 
 app.listen(3000) //listen in for requests on port 3000

@@ -52,8 +52,11 @@ module.exports = {
             let user = data[0].loggedInUsers[i];
             if (user.email == email && user.password == password) {
                 data[0].loggedInUsers.splice(i);
+                return true;
             }
         }
+
+        return false;
     }
 };
 

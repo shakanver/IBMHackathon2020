@@ -13,6 +13,16 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email": "shakeelanver26@gmail.com",
-    "password": "1234"
+    "email": "raman26@gmail.com",
+    "password": "123456"
+}
+
+###
+
+DELETE http://localhost:3000/logout
+Content-Type: application/json
+
+{
+    "email": "raman26@gmail.com",
+    "password": "123456"
 }
